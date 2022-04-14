@@ -62,15 +62,13 @@ class userController {
     const token = JwtGenerate(UserFind.id, UserFind.email, UserFind.role)
     return res.json({ token })
 
-
-
   }
-
   async check(req, res, next) {
-
+    res.json({ message: "Token generate... Status: OK ", token })
   }
+
 }
 
 
 
-module.exports = new userController;
+module.exports = new userController();
