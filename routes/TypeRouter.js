@@ -1,9 +1,11 @@
 const  Router  = require('express');
 const router = new Router();
+const typeController = require('../controllers/typeController');
 
-router.get('/', (req, res) => {
-  res.send('Hello World!');
-});
+
+router.post('/create',typeController.create)
+router.get('/getAll',typeController.getAll)
+
 
 
 module.exports = router;
