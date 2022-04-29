@@ -1,7 +1,7 @@
-const ApiError = require('../error/apiError')
+const ApiError = require("../error/apiError")
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
-const { User, Basket } = require('../models/models')
+const { User, Basket } = require("../models/models")
 
 
 const JwtGenerate = (id, email, role) => {
@@ -10,7 +10,7 @@ const JwtGenerate = (id, email, role) => {
     process.env.SECRET_KEY,
     { expiresIn: '24h' }
   )
-}
+};
 class userController {
 
   async registration(req, res, next) {
@@ -37,7 +37,7 @@ class userController {
 
 
     } catch (error) {
-      next(error)
+      next(error);
     }
 
   }
@@ -67,7 +67,7 @@ class userController {
     res.json({ message: "Token generate... Status: OK ", token })
   }
 
-}
+};
 
 
 

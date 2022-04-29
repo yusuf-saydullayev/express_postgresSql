@@ -14,7 +14,4 @@ router.use('/type', typeRouter);
 
 
 
-
-
-
 module.exports = router;

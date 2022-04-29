@@ -9,7 +9,7 @@ const fileUpload = require('express-fileupload')
 app.use(cors())
 const router = require('./routes/index')
 const errorHandler = require('./middleware/ErrorHandlingMiddleware')
-const path = require('path')
+const path = require("path")
 
 // parse application/x-www-form-urlencoded
 const bodyParser = require('body-parser')
@@ -26,7 +26,7 @@ app.use(errorHandler)
 const start = async () => {
 
   try {
-    app.listen(PORT, () => console.log(`Server started on port ${PORT}!`))
+    app.listen(PORT, () => console.log(`Server started on port ${PORT}!`));
     await sequelize.authenticate()
     await sequelize.sync()
   } catch (error) {

@@ -29,7 +29,7 @@ const Basket = sequelize.define('basket', {
 })
 
 
-const BasketDevice = sequelize.define('basket_device', {
+const BasketDevice = sequelize.define("basket_device", {
   id: {
     type: DataTypes.INTEGER,
     autoIncrement: true,
@@ -38,7 +38,7 @@ const BasketDevice = sequelize.define('basket_device', {
 })
 
 
-const Device = sequelize.define('device', {
+const Device = sequelize.define("device", {
   id: {
     type: DataTypes.INTEGER,
     autoIncrement: true,
@@ -70,7 +70,7 @@ const Device = sequelize.define('device', {
 })
 
 
-const DeviceInfo = sequelize.define('device_info', {
+const DeviceInfo = sequelize.define("device_info", {
   id: {
     type: DataTypes.INTEGER,
     autoIncrement: true,
@@ -155,7 +155,7 @@ Rating.belongsTo(User)
 // ---------------------------------------------------------------------------------->
 
 Basket.hasMany(BasketDevice)
-BasketDevice.belongsTo(Basket)
+BasketDevice.belongsTo(Basket);
 
 Device.hasMany(DeviceInfo, { as: 'info' })
 DeviceInfo.belongsTo(Device)
